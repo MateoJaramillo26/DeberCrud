@@ -1,41 +1,57 @@
-# Python
+# ==================
+# General
+# ==================
+*.log
 *.pyc
 *.pyo
 *.pyd
-__pycache__
-*.db
+__pycache__/
 *.sqlite3
-*.log
+.DS_Store
+.env
+.vscode/
 
-# Virtual environments
-.env/
-.venv/
+# ==================
+# Pipenv
+# ==================
 Pipfile.lock
-*.tox
-*.nox
-*.coverage
-*.hypothesis
+# O si usas entorno dentro del proyecto:
+.venv/
 
+# ==================
 # Django
-*.log
+# ==================
+db.sqlite3
+/static/
+/media/
+/*.py[cod]
+*.db
 *.pot
 *.pyc
-*.pyo
-*.pyd
-__pycache__
-db.sqlite3
-media
-static
+instance/
+.webassets-cache
 
-# Django migrations
-*/migrations/*.py
-*/migrations/*.pyc
-*/migrations/__pycache__/
+# ==================
+# Angular
+# ==================
+# Node modules
+node_modules/
 
-# IDEs and editors
-.vscode/
+# Build output
+dist/
+tmp/
+out-tsc/
+.angular/cache/
+.angular/config.json
+
+# IDEs
 .idea/
+*.sublime-workspace
+*.sublime-project
 
-# System files
-.DS_Store
-Thumbs.db
+# Environment files
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
