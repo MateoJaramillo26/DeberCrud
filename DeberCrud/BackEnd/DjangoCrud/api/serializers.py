@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import Producto
 
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class ProductoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'groups']
+        model = Producto
+        fields = ['id','titulo', 'descripcion', 'created', 'updated']
