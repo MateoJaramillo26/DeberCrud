@@ -4,6 +4,7 @@ from django.db import models
 class Producto(models.Model):
     titulo = models.CharField(max_length= 100, verbose_name="Nombre del Producto")
     descripcion = models.CharField(max_length=256, verbose_name= "Descripcion")
+    precio = models.DecimalField(decimal_places= 2, max_digits= 6, verbose_name='Precio', null= True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Ingreso")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de Modificacion")
     
