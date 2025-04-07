@@ -1,0 +1,43 @@
+/* Estilos básicos para la navegación */
+nav {
+    background-color: #1e293b; /* Azul oscuro para fondo */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #e2e8f0; /* Gris claro para texto */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    text-decoration: none; /* Sin subrayado al pasar el cursor */
+    color: #38bdf8; /* Azul brillante para hover */
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8; /* Azul brillante para el logo */
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav a {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

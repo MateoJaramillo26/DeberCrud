@@ -1,0 +1,67 @@
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-300 to-white p-6"
+  style="background: linear-gradient(to bottom, #f3f3f3, white);"
+>
+  <!-- Header -->
+  <header
+    class="bg-tomato text-white text-center py-4 mb-6 shadow-md animate-fade"
+    style="background-color: tomato;"
+  >
+    <h1 class="text-3xl font-bold">CRUD Productos</h1>
+  </header>
+
+  <!-- Body -->
+  <div class="container mx-auto">
+    <h1 class="text-2xl font-bold mb-4 text-center">Lista de Productos</h1>
+
+    <!-- Botón para agregar un producto -->
+    <button
+      class="bg-blue-500 text-white px-4 py-2 rounded mb-6 block mx-auto"
+      (click)="agregarProducto()"
+    >
+      Agregar Producto
+    </button>
+
+    <!-- Lista de productos -->
+    <ul class="space-y-4">
+      <li
+        *ngFor="let producto of productos"
+        class="bg-white p-4 border rounded-2xl shadow-md flex space-x-4"
+        style="border-radius: 15px;"
+      >
+        <!-- Imagen de producto -->
+        <div class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-md">
+          <!-- Aquí podría ir una imagen si la tuvieses -->
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-lg font-semibold">{{ producto.titulo }}</h2>
+          <p class="text-sm text-gray-600">{{ producto.descripcion }}</p>
+          <p class="text-sm text-green-600 font-bold mt-2">${{ producto.precio }}</p>
+        </div>
+        <!-- Acciones -->
+        <div class="space-y-2 flex flex-col justify-center">
+          <button
+            class="bg-yellow-500 text-white px-4 py-2 rounded"
+            (click)="editarProducto(producto)"
+          >
+            Editar
+          </button>
+          <button
+            class="bg-red-500 text-white px-4 py-2 rounded"
+            (click)="eliminarProducto(producto.id)"
+          >
+            Eliminar
+          </button>
+        </div>
+      </li>
+
+      <!-- Separador entre productos -->
+      <hr class="border-black mt-6" />
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-8 text-gray-700">
+    <p class="font-medium">Mateo Jaramillo Crud</p>
+  </footer>
+</div>
