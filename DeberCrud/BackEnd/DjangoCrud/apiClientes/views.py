@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import permissions, viewsets
 from .models import Cliente
 from .serializers import  ClienteSerializer
-from rest_framework.permissions import IsAutheticated
+from rest_framework.permissions import IsAuthenticated
 
 class ClienteViewSet(viewsets.ModelViewSet):
     """
@@ -10,4 +10,4 @@ class ClienteViewSet(viewsets.ModelViewSet):
     """
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
-    permission_classes = [IsAutheticated]
+    permission_classes = [IsAuthenticated]
