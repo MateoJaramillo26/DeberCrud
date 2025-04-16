@@ -18,15 +18,18 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from rest_framework import routers
-from api import views
+from api import views as apiProductos
+from apiClientes import views as apiClientesViews
+from django.contrib.auth.decorators import login_required
 
 router = routers.DefaultRouter()
-router.register(r'producto', views.ProductoViewSet)
+router.register(r'producto', apiProductos.ProductoViewSet)
+router.register(r'cliente', apiClientesViews.ClienteViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/',(admin.site.urls)),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

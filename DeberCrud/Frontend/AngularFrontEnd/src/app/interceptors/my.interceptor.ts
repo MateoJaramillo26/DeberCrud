@@ -5,9 +5,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class MyInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // Aquí puedes modificar la solicitud antes de enviarla
     const modifiedRequest = req.clone({
-      headers: req.headers.set('Authorization', 'Bearer my-token') // Ejemplo de agregar un header
+      headers: req.headers.set('Authorization', 'Bearer my-token')
     });
     
     return next.handle(modifiedRequest);

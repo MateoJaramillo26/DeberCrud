@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+  /* Agregar un suave efecto de desvanecimiento a todo el contenido */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  h1, h2 {
+    color: #1F2937;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  footer {
+    font-size: 1.2rem;
+    color: #4B5563;
+    padding: 1rem;
+    background-color: #F3F4F6;
+  }
+
+  header {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    padding: 1rem 0; /* py-4 */
+    margin-bottom: 1.5rem; /* mb-6 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    display: flex; /* Flexbox para alinear contenido */
+    flex-direction: column; /* Colocar título y navegación en columnas */
+    position: relative; /* Para posicionar la navegación a la derecha */
+}
+
+/* Estilo del título */
+header h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    margin: 0 auto; /* Centramos el título horizontalmente */
+}
+
+/* Navegación en la esquina derecha */
+header .main-navigation {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Centrar verticalmente respecto al header */
+    right: 1rem; /* Separación del borde derecho */
+    transform: translateY(-50%); /* Ajustar para centrar completamente */
+}
+
+header .main-navigation ul {
+    display: flex; /* Mostrar los enlaces en línea */
+    gap: 1rem; /* Espaciado entre enlaces */
+    list-style: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces */
+header .main-navigation li a {
+    color: white;
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header .main-navigation li a:hover {
+    color: lightyellow; /* Cambio de color al pasar el mouse */
+}
+
