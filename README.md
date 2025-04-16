@@ -1,21 +1,20 @@
-# Angular-Django Fullstack Project
+# Proyecto Productos
 
-Este proyecto combina un frontend en Angular con un backend en Django para manejar la gestión de productos y autenticación de usuarios.
+Este es un proyecto que utiliza **Angular** en el frontend y **Django** en el backend. El sistema permite gestionar productos, proporcionando funcionalidades como iniciar sesión, ver productos, agregar, editar y eliminar productos.
 
-Tabla de Contenidos
+## Tecnologías Utilizadas
 
-Descripción
+### Frontend
+- **Angular**: Framework para construir la interfaz de usuario.
+- **Tailwind CSS**: Utilizado para estilos rápidos y modernos.
+- **HTTP Client**: Para realizar solicitudes HTTP.
 
-Características
+### Backend
+- **Django**: Framework de Python para el backend.
+- **Django REST Framework**: Para crear APIs RESTful.
 
-Tecnologías Utilizadas
-
-Instalación y Configuración
-
-Backend (Django)
-
-Frontend (Angular)
-
+## Estructura del Proyecto
+my-project/ ├── README.md ├── frontend/ │ ├── src/ │ ├── package.json │ ├── backend/ │ ├── manage.py │ ├── db.sqlite3└── .gitignore
 Uso
 
 Contribuciones
@@ -26,27 +25,27 @@ Descripción
 
 Este proyecto permite gestionar productos mediante un CRUD (Crear, Leer, Actualizar, Eliminar) y cuenta con un sistema de autenticación de usuarios. El frontend está construido en Angular y el backend en Django, ofreciendo una experiencia completa para los desarrolladores y usuarios.
 
-Características
+#Características
 
-Sistema de autenticación de usuarios con JWT.
+* Sistema de autenticación de usuarios con JWT.
 
-Gestión de productos con un CRUD completo.
+* Gestión de productos con un CRUD completo.
 
-Interceptores HTTP para manejar tokens de autenticación.
+* Interceptores HTTP para manejar tokens de autenticación.
 
-Uso de rutas protegidas para garantizar la seguridad.
+* Uso de rutas protegidas para garantizar la seguridad.
 
-Diseño moderno utilizando Tailwind CSS.
+* Diseño moderno utilizando Tailwind CSS.
 
-Tecnologías Utilizadas
+* Tecnologías Utilizadas
 
-Frontend: Angular, Tailwind CSS
+* Frontend: Angular, Tailwind CSS
 
-Backend: Django, Django REST Framework (DRF)
+* Backend: Django, Django REST Framework (DRF)
 
-Base de Datos: SQLite (puede ser sustituido por PostgreSQL, MySQL, etc.)
+* Base de Datos: SQLite (puede ser sustituido por PostgreSQL, MySQL, etc.)
 
-Instalación y Configuración
+# Instalación y Configuración
 
 Backend (Django)
 
