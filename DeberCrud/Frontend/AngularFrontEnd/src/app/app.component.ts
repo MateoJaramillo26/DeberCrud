@@ -1,25 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './api.service';
+import { AuthService } from './auth.service'; // Importa el servicio de autenticación
+import { Router, RouterLink, RouterOutlet } from '@angular/router'; // Para manejar redirecciones
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   productos: any[] = [];
   productoSeleccionado: any = null;
+  user: string | null = null; // Variable para almacenar el estado del usuario
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.obtenerProductos();
+    this.user = this.authService.getUser(); // Obtener el usuario al cargar el componente
   }
 
+  // Métodos para autenticación
+  logout(): void {
+    this.authService.logout();
+    this.user = null;
+    this.router.navigate(['/login']); // Redirigir al login después de cerrar sesión
+  }
+
+  // Métodos para manejar productos
   obtenerProductos(): void {
     this.apiService.getProductos().subscribe({
       next: (data) => {
