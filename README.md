@@ -25,7 +25,7 @@ Descripción
 
 Este proyecto permite gestionar productos mediante un CRUD (Crear, Leer, Actualizar, Eliminar) y cuenta con un sistema de autenticación de usuarios. El frontend está construido en Angular y el backend en Django, ofreciendo una experiencia completa para los desarrolladores y usuarios.
 
-#Características
+# Características
 
 * Sistema de autenticación de usuarios con JWT.
 
@@ -83,7 +83,7 @@ ng serve
 
 Abrir en el navegador: http://localhost:4200
 
-Uso
+# Uso
 
 Acceder al sistema de login en la ruta /login.
 
